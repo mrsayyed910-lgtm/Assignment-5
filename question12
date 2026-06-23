@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(1, 11)
+y = x * 2
+
+fig, axs = plt.subplots(2, 2, figsize=(10, 8))
+
+axs[0,0].plot(x, y)
+axs[0,0].set_title("Line Plot")
+
+axs[0,1].scatter(x, y)
+axs[0,1].set_title("Scatter Plot")
+
+axs[1,0].bar(x, y)
+axs[1,0].set_title("Bar Chart")
+
+axs[1,1].hist(y)
+axs[1,1].set_title("Histogram")
+
+fig.suptitle("2x2 Subplots Example")
+plt.tight_layout()
+plt.show()
