@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+
+subjects = ["Math","Science","English","Computer","Physics"]
+marks = [80,85,78,92,88]
+
+plt.figure(figsize=(6,4))
+plt.plot(subjects, marks, marker="o", label="Marks")
+plt.title("Marks Trend Across Subjects")
+plt.xlabel("Subjects")
+plt.ylabel("Marks")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+students = ["Ali","Sara","Aman","Riya","Neha"]
+student_marks = [85,72,91,67,88]
+
+plt.figure(figsize=(6,4))
+plt.bar(students, student_marks, label="Marks")
+plt.title("Marks Comparison")
+plt.xlabel("Students")
+plt.ylabel("Marks")
+plt.legend()
+plt.grid(True)
+plt.show()
