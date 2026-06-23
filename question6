@@ -1,0 +1,23 @@
+import pandas as pd
+import numpy as np
+
+data = {
+    "Name":["Ali","Sara","Aman","Riya"],
+    "Marks":[85,np.nan,90,np.nan],
+    "City":["Delhi","Mumbai",np.nan,"Jaipur"]
+}
+
+df = pd.DataFrame(data)
+
+print("Missing Values:")
+print(df.isnull())
+
+df["Marks"].fillna(df["Marks"].mean(), inplace=True)
+
+print("\nAfter Filling Marks:")
+print(df)
+
+df2 = df.dropna(subset=["City"])
+
+print("\nAfter Dropping Missing City:")
+print(df2)
