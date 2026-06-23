@@ -1,0 +1,22 @@
+import pandas as pd
+
+data = {
+    "Name":["Ali","Sara","Aman","Riya","John","Neha","Raj","Simran","Arjun","Pooja"],
+    "Age":[20,21,19,22,20,21,23,20,22,19],
+    "Marks":[85,72,91,67,78,88,60,95,81,74],
+    "City":["Delhi","Mumbai","Jaipur","Pune","Delhi","Chennai","Kota","Pilani","Ajmer","Udaipur"]
+}
+
+df = pd.DataFrame(data)
+
+print("First 5 Rows:")
+print(df.head())
+
+print("\nStatistics:")
+print(df.describe())
+
+print("\nMarks > 75:")
+print(df[df["Marks"] > 75])
+
+print("\nSorted by Marks:")
+print(df.sort_values(by="Marks", ascending=False))
