@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.DataFrame({
+    "Math":[80,90,70,85,95],
+    "Science":[75,88,69,92,85],
+    "English":[78,81,72,89,90],
+    "Computer":[95,90,85,98,93]
+})
+
+df["Math"].plot(kind="hist", title="Marks Distribution")
+plt.show()
+
+df.plot(kind="box", title="Box Plot")
+plt.show()
+
+category = pd.Series([40,30,20,10],
+index=["A","B","C","D"])
+
+category.plot(kind="pie", autopct="%1.1f%%")
+plt.title("Category Percentage")
+plt.ylabel("")
+plt.show()
